@@ -63,6 +63,21 @@ body {
 /***************************/
 /* GENERAL REUSABLE COMPONENTS */
 /***************************/
+
+.container {
+  max-width: 120rem;
+  padding: 0 3.2rem;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  gap: 9.6rem;
+}
+
+.grid--2-cols {
+  grid-template-columns: repeat(2, 1fr);
+}
 .heading-primary {
   font-size: 5.2rem;
   font-weight: 700;
@@ -226,4 +241,12 @@ body {
 .students-text span {
   color: #10a679;
   font-weight: 700;
+}
+
+.section-how {
+  padding: 9.6px 0;
+}
+
+.feature-img {
+  width: 50%;
 }
