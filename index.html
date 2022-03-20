@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="css/general.css" />
     <link rel="stylesheet" href="css/style.css" />
 
+
     <script
       type="module"
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
@@ -22,6 +23,10 @@
       nomodule
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
+
+  <script defer src="/higherself-project/js/script.js">
+
+  </script>
 
     <title>HigherSelf</title>
   </head>
@@ -302,19 +307,54 @@
 
       </section>
 
-      <section class="section-testimonial">
-       
-          <span class="subheading">Testimonials</span>
-          <div class="testimonial-container">
-          <img class="testimoial-1"src="img/testimonial/testimonial-1.jpg">
-          <p class="testimonial-text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro alias consequatur odit iusto repellat dignissimos voluptatum omnis quas, ullam fugiat commodi rem! Tempora officiis doloribus necessitatibus exercitationem minima, quia maxime.
-          </p>
-          <p class="testimonial-author"> Stephnaie</p>
-          
+  <section class="testimonial-section">
+    <div class ="carousel">
+      <img class ="testimonial-1"src="img/testimonial/testimonial-1.jpg" id="person-img"alt="stephnaie" />
+      <blockquote class="testimonial">
+        <p class="testimonial-text" id="info">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit fugiat non explicabo expedita facilis beatae modi error tempora. Ut dolore eveniet accusamus quos ipsam deserunt repellat facere officiis, beatae sint.
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non ab minus eveniet eum fugit, officia quasi quae quibusdam ullam esse. Aspernatur eos voluptate sunt distinctio et iusto a, illum quo.
+        </p>
+        <p class="testimonial-author" id="author">Stephanie</p>
+      </blockquote>
 
-        </div>
-      </section>
+      <button class="btn-testimonial btn--left">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="btn-icon"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M15 19l-7-7 7-7"
+          />
+        </svg>
+      </button>
+      <button class="btn-testimonial btn--right">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="btn-icon"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M9 5l7 7-7 7"
+          />
+        </svg>
+      </button>
+
+      
+    </div>
+
+  </section>
     </main>
   </body>
 </html>
