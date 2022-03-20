@@ -287,3 +287,34 @@
   height: 3rem;
   color: #12b886;
 }
+
+/***************************/
+/* TESTIMONIAL SECTIONS*/
+/***************************/
+
+.section-testimonial {
+  display: flex;
+  justify-content: center;
+}
+
+.subheading {
+  justify-content: center;
+}
+
+.subheading {
+  display: block;
+  text-align: center;
+}
+
+.testimonial-container {
+  width: 100rem;
+  background-color: #12b886;
+  border-radius: 8px;
+  display: flex;
+  margin-top: 10rem;
+}
+
+.testimoial-1 {
+  height: 20rem;
+  border-radius: 8px;
+}
