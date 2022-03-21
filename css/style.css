@@ -12,7 +12,7 @@
   margin: 0 auto;
   padding: 0 3.2rem;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1.5fr 1fr;
   gap: 9.6rem;
   align-items: center;
 }
@@ -74,9 +74,15 @@
 }
 
 .hero-img {
-  width: 100%;
+  width: 40rem;
+  height: 60.2rem;
+  border-radius: 10%;
+  opacity: 0.8;
 }
 
+.hero-img-box {
+  justify-self: center;
+}
 .higherself-students {
   display: flex;
   align-items: center;
@@ -204,7 +210,12 @@
   padding: 9.6rem 0;
 }
 
-.courses {
+.benefits {
+  padding: 3.2rem 2.4rem 0 3.2rem;
+}
+
+.courses,
+.benefits {
   box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
   border-radius: 11px;
   overflow: hidden;
@@ -294,7 +305,7 @@
 .testimonial-section {
   display: grid;
   justify-content: center;
-  margin-bottom: 30rem;
+  margin-bottom: 19.2rem;
 }
 
 .carousel {
