@@ -341,14 +341,16 @@
 /* TESTIMONIAL SECTIONS*/
 /***************************/
 .testimonial-section {
+  padding: 9.6rem 0;
   display: grid;
   justify-content: center;
-  margin-bottom: 19.2rem;
+  margin-bottom: 9.6rem;
 }
 
 .carousel {
   width: 113.6rem;
   background-color: #12b886;
+  box-shadow: 0 0 32px rgba(0, 0, 0, 0.2);
   padding: 32px 48px 32px 48px;
   border-radius: 8px;
   display: flex;
@@ -410,5 +412,80 @@
 }
 
 /***************************/
-/* TESTIMONIAL SECTIONS*/
+/* FAQ SECTIONS*/
 /***************************/
+
+.faq-box {
+  width: 100rem;
+  margin: 100px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.item {
+  box-shadow: 0 0 32px rgba(0, 0, 0, 0.1);
+  padding: 24px;
+
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  column-gap: 24px;
+  row-gap: 32px;
+  align-items: center;
+}
+
+.number,
+.question {
+  font-size: 24px;
+  font-weight: 500;
+  /* color: #087f5b; */
+}
+
+.number {
+  color: #ced4da;
+}
+
+.open-icon,
+.close-icon {
+  width: 24px;
+  height: 24px;
+  stroke: #087f5b;
+}
+
+.answer {
+  grid-column: 2;
+  display: none;
+}
+
+.answer p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+/* open */
+
+.open {
+  border-top: 4px solid #087f5b;
+}
+
+.open .answer {
+  display: block;
+}
+
+.open .number,
+.open .question {
+  color: #087f5b;
+}
+
+.close-icon {
+  display: none;
+}
+
+.open .close-icon {
+  display: inline;
+}
+
+.open .open-icon {
+  display: none;
+}
