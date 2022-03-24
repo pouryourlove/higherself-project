@@ -68,3 +68,10 @@ leftBtn.addEventListener("click", function () {
   }
   showPerson(currentItem);
 });
+
+//course
+
+function flipFunction() {
+  let myElement = document.getElementById("theCard");
+  myElement.classList.toggle("flipper");
+}
