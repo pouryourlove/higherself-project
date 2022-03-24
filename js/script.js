@@ -75,3 +75,30 @@ function flipFunction() {
   let myElement = document.getElementById("theCard");
   myElement.classList.toggle("flipper");
 }
+
+/***************************/
+/* FAQ SECTIONS*/
+/***************************/
+
+const questions = document.querySelectorAll(".item");
+
+questions.forEach(function (question) {
+  const btn = question.querySelector(".open-icon");
+  const closeBtn = question.querySelector(".close-icon");
+
+  btn.addEventListener("click", function () {
+    questions.forEach(function (item) {
+      if (item !== questions) {
+        item.classList.remove("open");
+      }
+    });
+  });
+
+  btn.addEventListener("click", function () {
+    question.classList.toggle("open");
+  });
+
+  closeBtn.addEventListener("click", function () {
+    question.classList.remove("open");
+  });
+});

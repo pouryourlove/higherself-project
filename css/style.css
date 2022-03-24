@@ -344,7 +344,7 @@
   padding: 9.6rem 0;
   display: grid;
   justify-content: center;
-  margin-bottom: 9.6rem;
+  padding-bottom: 9.6rem;
 }
 
 .carousel {
@@ -415,9 +415,15 @@
 /* FAQ SECTIONS*/
 /***************************/
 
+.faq-section {
+  display: grid;
+  justify-content: center;
+  padding: 9.6rem 0;
+}
+
 .faq-box {
   width: 100rem;
-  margin: 100px auto;
+  margin-bottom: 9.6rem;
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -489,3 +495,7 @@
 .open .open-icon {
   display: none;
 }
+
+/***************************/
+/*  SECTIONS*/
+/***************************/
