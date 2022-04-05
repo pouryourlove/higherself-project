@@ -1,3 +1,69 @@
+/***************************/
+// NAV SMOOTH SCCROLLING ANIMATION
+/***************************/
+// 1)select all links
+
+const allLinks = document.querySelectorAll("a:link");
+
+// 2)select each link and prevent default
+allLinks.forEach(function (link) {
+  link.addEventListener("click", function (e) {
+    e.preventDefault();
+    const href = link.getAttribute("href");
+
+    // scroll back to top
+    if (href === "#")
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+
+    if (href !== "#" && href.startsWith("#")) {
+      const sectionEl = document.querySelector(href);
+      sectionEl.scrollIntoView({ behavior: "smooth" });
+    }
+  });
+});
+
+/***************************/
+// STICKY NAVIGATION
+/***************************/
+
+// make navigation sticky as soon as the hero section moves out of the view port
+
+// 1)make a variable for section hero
+
+const sectionHeroEl = document.querySelector(".section-hero");
+
+const observer = new IntersectionObserver(
+  function (entries) {
+    const ent = entries[0];
+
+    if (ent.isIntersecting === false) {
+      document.body.classList.add("sticky");
+    }
+    if (ent.isIntersecting) {
+      document.body.classList.remove("sticky");
+    }
+  },
+  {
+    //root is where this element should appear or not. It means viewport
+    root: null,
+    //it means we will observe hero section inside the viewport
+    threshold: 0,
+    //we will have an event as soon as 0% of the hero section is inside of the viewport
+    rootMargin: "-80px",
+    //because the height of the nav is 8rem... and it blocks the next section so we put -80px so the sticky bar can appear before the next section.
+  }
+);
+observer.observe(sectionHeroEl);
+
+// 2)
+
+/***************************/
+/* TESTOMINAL SECTIONS*/
+/***************************/
+
 // local testimonials
 
 const testimonials = [
@@ -69,7 +135,9 @@ leftBtn.addEventListener("click", function () {
   showPerson(currentItem);
 });
 
-//course
+/***************************/
+/* COURSES SECTIONS*/
+/***************************/
 
 function flipFunction() {
   let myElement = document.getElementById("theCard");
@@ -102,3 +170,31 @@ questions.forEach(function (question) {
     question.classList.remove("open");
   });
 });
+
+/***************************/
+/* FOOTER SECTION*/
+/***************************/
+
+const year1 = document.querySelector(".year");
+const currentYear = new Date().getFullYear();
+year1.textContent = currentYear;
+
+///////////////////////////////////////////////////////////
+// Fixing flexbox gap property missing in some Safari versions
+function checkFlexGap() {
+  var flex = document.createElement("div");
+  flex.style.display = "flex";
+  flex.style.flexDirection = "column";
+  flex.style.rowGap = "1px";
+
+  flex.appendChild(document.createElement("div"));
+  flex.appendChild(document.createElement("div"));
+
+  document.body.appendChild(flex);
+  var isSupported = flex.scrollHeight === 1;
+  flex.parentNode.removeChild(flex);
+  console.log(isSupported);
+
+  if (!isSupported) document.body.classList.add("no-flexbox-gap");
+}
+checkFlexGap();

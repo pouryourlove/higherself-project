@@ -23,26 +23,35 @@
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
 
+    <!-- smooth scroll for safari -->
+
+    <script
+      defer
+      src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"
+    ></script>
+
     <script defer src="/higherself-project/js/script.js"></script>
 
     <title>HigherSelf</title>
   </head>
   <body>
     <header class="header">
-      <img
-        class="logo"
-        alt="Higherself logo"
-        src="img/logo_transparent-removebg-preview.png"
-      />
+      <a href="#">
+        <img
+          class="logo"
+          alt="Higherself logo"
+          src="img/logo_transparent-removebg-preview.png"
+        />
+      </a>
 
       <nav class="main-nav">
         <ul class="main-nav-list">
-          <li><a class="main-nav-link" href="#">Secontion 1</a></li>
-          <li><a class="main-nav-link" href="#">Secontion 2</a></li>
-          <li><a class="main-nav-link" href="#">Secontion 3</a></li>
-          <li><a class="main-nav-link" href="#">Secontion 4</a></li>
+          <li><a class="main-nav-link" href="#how">What do we offer?</a></li>
+          <li><a class="main-nav-link" href="#courses">Courses</a></li>
+          <li><a class="main-nav-link" href="#test">Testimonials</a></li>
+          <li><a class="main-nav-link" href="#faq">FAQ</a></li>
           <li>
-            <a class="main-nav-link nav-cta" href="#">Secontion 5</a>
+            <a class="main-nav-link nav-cta" href="#subscribe">Subscribe now</a>
           </li>
         </ul>
       </nav>
@@ -61,10 +70,10 @@
               However, have you ever actually done it? HigherSelf is here to
               help you make your meditation as a daily habit.
             </p>
-            <a href="#" class="btn btn--first margin-right-sm"
+            <a href="#subscribe" class="btn btn--first margin-right-sm"
               >Let's meditate</a
             >
-            <a href="#" class="btn btn--second">Learn more &darr;</a>
+            <a href="#how" class="btn btn--second">Learn more &darr;</a>
             <div class="higherself-students">
               <div class="students-imgs">
                 <img src="img/customer/customer-1.jpg" alt="Customer photo" />
@@ -108,7 +117,7 @@
         </div>
       </section>
 
-      <section class="section-how">
+      <section class="section-how" id="how">
         <div class="container">
           <span class="subheading">What do we offer?</span>
           <h2 class="heading-secondary">
@@ -180,7 +189,7 @@
         </div>
       </section>
 
-      <section class="section-courses">
+      <section class="section-courses" id="courses">
         <div class="container center-text">
           <span class="subheading">Courses</span>
           <h2 class="heading-secondary">Our best selling courses</h2>
@@ -327,7 +336,7 @@
         </div>
       </section>
 
-      <section class="testimonial-section">
+      <section class="testimonial-section" id="test">
         <div class="container">
           <span class="subheading">Testimonials</span>
           <h2 class="heading-secondary">See what others think about us</h2>
@@ -389,7 +398,7 @@
 
       <!-- FAQ SECTION -->
 
-      <section class="faq-section">
+      <section class="faq-section" id="faq">
         <div class="container">
           <span class="subheading">FAQ</span>
           <h2 class="heading-secondary">Frequent asked questions</h2>
@@ -526,7 +535,7 @@
         </div>
       </section>
 
-      <section class="email-section grid">
+      <section class="email-section grid" id="subscribe">
         <div class="email-box">
           <h1>Subscribe Now</h1>
           <span>Get notified about the next update</span>
