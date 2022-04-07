@@ -71,7 +71,7 @@ const testimonials = [
     id: 1,
     name: "Gaelle",
     img: "https://i.postimg.cc/qMyJzWmH/testimonial-2.jpg",
-    text: "I really recommend this site",
+    text: "hello",
   },
 
   {

@@ -45,6 +45,11 @@ Spacing system (px)
   box-sizing: border-box;
 }
 
+html,
+body {
+  overflow-x: hidden;
+}
+
 html {
   /* font-size: 10px;
     10px/16px = 0.625 = 62.5% */

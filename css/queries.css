@@ -1,0 +1,222 @@
+/* 1350/16 */
+@media (max-width: 84rem) {
+  .hero {
+    max-width: 120rem;
+  }
+  .heading-primary {
+    font-size: 4.4rem;
+  }
+}
+
+/* 1200/16 */
+@media (max-width: 75em) {
+  html {
+    /* 8px / 16px */
+    font-size: 56.25%;
+  }
+
+  .grid {
+    column-gap: 4.8rem;
+    row-gap: 6.4rem;
+  }
+  .heading-secondary {
+    font-size: 3.6rem;
+  }
+
+  .heading-tertiary {
+    font-size: 2.4rem;
+  }
+
+  .header {
+    padding: 0 3.2rem;
+  }
+
+  .main-nav-list {
+    gap: 3.2rem;
+  }
+
+  .hero {
+    gap: 4.8rem;
+  }
+
+  .carousel {
+    margin: 0 3.2rem 0 3.2rem;
+  }
+}
+
+/* 1078/16 */
+@media (max-width: 67em) {
+  .carousel {
+    width: 100rem;
+    margin: 0 3.2rem 0 3.2rem;
+  }
+}
+
+/* 944/16 */
+
+@media (max-width: 59em) {
+  html {
+    /* 8px / 16px */
+    font-size: 50%;
+  }
+  .section-how {
+    margin: 0 3.2rem 0 3.2rem;
+  }
+  .carousel {
+    width: 80rem;
+    margin: 0 3.2rem 0 3.2rem;
+  }
+
+  .faq-box {
+    width: 80rem;
+  }
+
+  .section-courses {
+    margin: 0 3.2rem 0 3.2rem;
+  }
+}
+
+/* BELOW 704PX (Smaller tablets) */
+
+@media (max-width: 44em) {
+  html {
+    /* 8px / 16px */
+    font-size: 50%;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 0 8rem;
+    gap: 6.4rem;
+  }
+
+  .hero-text-box,
+  .hero-img-box {
+    text-align: center;
+  }
+
+  .grid {
+    row-gap: 4.8rem;
+  }
+
+  .grid--2-cols,
+  .grid--3-cols {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .feature-img-box:nth-child(2) {
+    grid-row: 1;
+  }
+
+  .feature-img-box:nth-child(6) {
+    grid-row: 5;
+  }
+
+  .btn,
+  .btn:link,
+  .btn:visited {
+    padding: 2.4rem 1.6rem;
+  }
+
+  .benefits {
+    grid-column: 1/-1;
+    margin-bottom: 30rem;
+  }
+
+  .checkout-text {
+    margin-top: 30rem;
+  }
+
+  .carousel {
+    width: 60rem;
+    height: auto;
+    gap: 50px;
+  }
+
+  .testimonial-1 {
+    height: 20rem;
+  }
+
+  .faq-box {
+    width: 60rem;
+  }
+
+  .logos img {
+    height: 1.5rem;
+  }
+
+  .address-col {
+    justify-self: left;
+  }
+}
+
+/* BELOW 544PX (Phones) */
+
+@media (max-width: 34em) {
+  .grid {
+    row-gap: 4.8rem;
+  }
+  .btn,
+  .btn:link,
+  .btn:visited {
+    padding: 2.4rem 1.6rem;
+  }
+
+  .section-hero {
+    padding: 2.4rem 0 6.4rem 0;
+  }
+
+  .hero {
+    padding: 0 3.2rem;
+  }
+
+  .logos img {
+    height: 1.2rem;
+  }
+
+  .carousel {
+    width: 50rem;
+    height: auto;
+    gap: 30px;
+  }
+
+  .faq-box {
+    width: 50rem;
+  }
+
+  .heading-secondary {
+    font-size: 2.5rem;
+  }
+}
+
+/* BELOW 447PX */
+
+@media (max-width: 27em) {
+  html {
+    /* 7px / 16px */
+    font-size: 43%;
+  }
+
+  .carousel {
+    width: 45rem;
+    height: auto;
+    gap: 30px;
+  }
+
+  .testimonial-1 {
+    width: 15rem;
+    height: auto;
+  }
+
+  .testimonial-text {
+    font-size: 15px;
+  }
+
+  .faq-box {
+    width: 45rem;
+  }
+
+  .faq-box .question {
+    font-size: 20px;
+  }
+}
