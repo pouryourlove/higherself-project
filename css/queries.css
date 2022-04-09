@@ -63,12 +63,12 @@
     margin: 0 3.2rem 0 3.2rem;
   }
   .carousel {
-    width: 80rem;
+    width: 85rem;
     margin: 0 3.2rem 0 3.2rem;
   }
 
   .faq-box {
-    width: 80rem;
+    width: 85rem;
   }
 
   .section-courses {
@@ -148,6 +148,10 @@
   .address-col {
     justify-self: left;
   }
+
+  .section-courses {
+    margin-bottom: 9.6rem;
+  }
 }
 
 /* BELOW 544PX (Phones) */
@@ -186,38 +190,6 @@
 
   .heading-secondary {
     font-size: 2.5rem;
-  }
-}
-
-/* BELOW 447PX */
-
-@media (max-width: 27em) {
-  html {
-    /* 7px / 16px */
-    font-size: 43%;
-  }
-
-  .carousel {
-    width: 45rem;
-    height: auto;
-    gap: 30px;
-  }
-
-  .testimonial-1 {
-    width: 15rem;
-    height: auto;
-  }
-
-  .testimonial-text {
-    font-size: 15px;
-  }
-
-  .faq-box {
-    width: 45rem;
-  }
-
-  .faq-box .question {
-    font-size: 20px;
   }
   /* MOBILE NAVIGATION*/
 
@@ -282,5 +254,49 @@
   .main-nav-link:link,
   .main-nav-link:visited {
     font-size: 3rem;
+  }
+
+  .section-courses {
+    margin-bottom: 9.6rem;
+  }
+
+  .carousel {
+    padding-left: 30px;
+  }
+}
+
+/* BELOW 447PX */
+
+@media (max-width: 27em) {
+  html {
+    /* 7px / 16px */
+    font-size: 43%;
+  }
+
+  .carousel {
+    width: 45rem;
+    height: auto;
+    gap: 30px;
+  }
+
+  .testimonial-1 {
+    width: 15rem;
+    height: auto;
+  }
+
+  .testimonial-text {
+    font-size: 15px;
+  }
+
+  .faq-box {
+    width: 45rem;
+  }
+
+  .faq-box .question {
+    font-size: 20px;
+  }
+
+  .carousel {
+    padding-left: 30px;
   }
 }
