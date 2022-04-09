@@ -10,6 +10,7 @@
   /*wanting header to be sticky later*/
   height: 9.6rem;
   padding: 0 4.8rem;
+  position: relative;
 }
 
 .logo {
@@ -67,7 +68,7 @@
   padding-top: 0;
   padding-bottom: 0;
   background-color: rgba(255, 255, 255, 0.952);
-  z-index: 100;
+  z-index: 999;
   box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.2);
 }
 
@@ -498,12 +499,12 @@
 .faq-section {
   display: grid;
   justify-content: center;
-  /* padding: 9.6rem 0; */
+  padding: 9.6rem 0;
 }
 
 .faq-box {
   width: 100rem;
-  margin-bottom: 9.6rem;
+  /* margin-bottom: 9.6rem; */
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -582,7 +583,7 @@
 
 .email-section {
   justify-content: center;
-  padding: 0 0 9.6rem 0;
+  padding: 9.6rem 0 9.6rem 0;
 }
 
 .email-box {
@@ -701,4 +702,24 @@
 .footer-link:hover,
 .footer-link:active {
   color: #555;
+}
+
+/* MOBILE */
+.btn-mobile-nav {
+  border: none;
+  background: none;
+  cursor: pointer;
+
+  display: none;
+}
+
+.icon-mobile-nav {
+  height: 4.8rem;
+  width: 4.8rem;
+  color: #333;
+}
+
+/* select in css based on attributes */
+.icon-mobile-nav[name="close-outline"] {
+  display: none;
 }

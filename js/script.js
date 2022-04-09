@@ -18,9 +18,14 @@ allLinks.forEach(function (link) {
         behavior: "smooth",
       });
 
+    // Scroll to other links
     if (href !== "#" && href.startsWith("#")) {
       const sectionEl = document.querySelector(href);
       sectionEl.scrollIntoView({ behavior: "smooth" });
+
+      //Close mbile navigation
+      if (link.classList.contains("main-nav-link"))
+        headerEl.classList.toggle("nav-open");
     }
   });
 });
@@ -57,8 +62,6 @@ const observer = new IntersectionObserver(
   }
 );
 observer.observe(sectionHeroEl);
-
-// 2)
 
 /***************************/
 /* TESTOMINAL SECTIONS*/
@@ -198,3 +201,11 @@ function checkFlexGap() {
   if (!isSupported) document.body.classList.add("no-flexbox-gap");
 }
 checkFlexGap();
+
+// MOBILE NAVIGATION
+const btnNavEl = document.querySelector(".btn-mobile-nav");
+const headerEl = document.querySelector(".header");
+
+btnNavEl.addEventListener("click", function () {
+  headerEl.classList.toggle("nav-open");
+});
