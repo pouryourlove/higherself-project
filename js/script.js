@@ -64,6 +64,29 @@ const observer = new IntersectionObserver(
 observer.observe(sectionHeroEl);
 
 /***************************/
+// MODAL
+/***************************/
+
+const modal = document.getElementById("myModal");
+const overlay = document.getElementById("overlay");
+const subscribe = document.getElementById("subscribe");
+const closeBtn = document.getElementById("close");
+
+subscribe.addEventListener("click", function () {
+  modal.style.display = "block";
+  overlay.style.display = "block";
+});
+
+closeBtn.addEventListener("click", function () {
+  modal.style.display = "none";
+  overlay.style.display = "none";
+});
+
+modal.style.transform = "translate(-50%, -50%)";
+
+//Show modal and overlay
+
+/***************************/
 // HERO TYPING TEXT ANIMATION
 /***************************/
 const heroTyping = "Meditate for self-discovery and potential.";

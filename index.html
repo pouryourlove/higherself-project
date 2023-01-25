@@ -52,7 +52,9 @@
           <li><a class="main-nav-link" href="#test">Testimonials</a></li>
           <li><a class="main-nav-link" href="#faq">FAQ</a></li>
           <li>
-            <a class="main-nav-link nav-cta" href="#subscribe">Subscribe</a>
+            <a class="main-nav-link nav-cta" id="subscribe" href="#subscribe"
+              >Subscribe</a
+            >
           </li>
         </ul>
       </nav>
@@ -61,6 +63,31 @@
         <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
         <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
       </button>
+
+      <!-- modal -->
+      <div id="myModal" class="modal">
+        <div class="modal-content">
+          <section class="email-section grid" id="subscribe">
+            <div class="email-box">
+              <button class="modal-close-btn" id="close">X</button>
+              <h1>Subscribe Now</h1>
+              <span>Get notified about the next update</span>
+
+              <form action="#">
+                <input type="text" name="name" placeholder="Name" />
+                <input
+                  type="email"
+                  name="email-address"
+                  placeholder="Email Address"
+                />
+                <button type="submit">Subscribe</button>
+              </form>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <div id="overlay" class="overlay"></div>
     </header>
 
     <main>
@@ -73,7 +100,7 @@
               meditation a daily habit for a calmer and more focused you. Start
               your journey to unlock your inner peace today.
             </p>
-            <a href="#subscribe" class="btn btn--first margin-right-sm"
+            <a href="#courses" class="btn btn--first margin-right-sm"
               >Let's meditate</a
             >
             <a href="#how" class="btn btn--second">Learn more &darr;</a>
@@ -522,22 +549,6 @@
               </p>
             </div>
           </div>
-        </div>
-      </section>
-
-      <section class="email-section grid" id="subscribe">
-        <div class="email-box">
-          <h1>Subscribe Now</h1>
-          <span>Get notified about the next update</span>
-
-          <form action="#">
-            <input
-              type="email"
-              name="email-address"
-              placeholder="Email Address"
-            />
-            <button type="submit">Subscribe</button>
-          </form>
         </div>
       </section>
     </main>
