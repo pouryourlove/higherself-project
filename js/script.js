@@ -64,6 +64,23 @@ const observer = new IntersectionObserver(
 observer.observe(sectionHeroEl);
 
 /***************************/
+// HERO TYPING TEXT ANIMATION
+/***************************/
+const heroTyping = "Meditate for self-discovery and potential.";
+const element = document.querySelector(".heading-primary");
+console.log(element);
+//The current index of the text being displayed
+let index = 0;
+const interval = setInterval(() => {
+  //update the heroTyping
+  element.textContent = heroTyping.slice(0, index);
+  index++;
+  //if all the text has been displayed, clear the interval
+  if (index > heroTyping.length) {
+    clearInterval(interval);
+  }
+}, 100);
+/***************************/
 /* TESTOMINAL SECTIONS*/
 /***************************/
 
