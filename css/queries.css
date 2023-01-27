@@ -1,4 +1,8 @@
+/* 1rem = 1em = 16px*/
+
 /* 1350/16 */
+/*BELOW 1344PX(Smaller desktops)*/
+
 @media (max-width: 84rem) {
   .hero {
     max-width: 120rem;
@@ -8,7 +12,7 @@
   }
 }
 
-/* 1200/16 */
+/* 1200/16  below 1200px*/
 @media (max-width: 75em) {
   html {
     /* 8px / 16px */
@@ -44,15 +48,15 @@
   }
 }
 
-/* 1078/16 */
+/* 1078/16  below 1072px*/
 @media (max-width: 67em) {
   .carousel {
-    width: 100rem;
-    margin: 0 3.2rem 0 3.2rem;
+    width: 80%;
+    margin: 0 auto;
   }
 }
 
-/* 944/16 */
+/* 944/16 below below 944px */
 
 @media (max-width: 59em) {
   html {
@@ -63,7 +67,7 @@
     margin: 0 3.2rem 0 3.2rem;
   }
   .carousel {
-    width: 85rem;
+    width: 90rem;
     margin: 0 3.2rem 0 3.2rem;
   }
 
@@ -76,227 +80,269 @@
   }
 }
 
-/* BELOW 704PX (Smaller tablets) */
+/* BELOW 900PX (Smaller tablets) */
 
-@media (max-width: 44em) {
-  html {
-    /* 8px / 16px */
-    font-size: 50%;
-  }
-
+@media (max-width: 55em) {
   .hero {
     grid-template-columns: 1fr;
-    padding: 0 8rem;
-    gap: 6.4rem;
+    margin: 0 3.5rem;
+    padding: 0 1rem;
   }
-
+  .hero-img {
+    width: 50%;
+    height: 50%;
+  }
   .hero-text-box,
   .hero-img-box {
     text-align: center;
   }
-
-  .grid {
-    row-gap: 4.8rem;
+  .heading-primary {
+    margin: 0 auto;
+    padding: 1em 0;
   }
-
-  .grid--2-cols,
-  .grid--3-cols {
-    grid-template-columns: repeat(1, 1fr);
-  }
-
-  .feature-img-box:nth-child(2) {
-    grid-row: 1;
-  }
-
-  .feature-img-box:nth-child(6) {
-    grid-row: 5;
-  }
-
-  .btn,
-  .btn:link,
-  .btn:visited {
-    padding: 2.4rem 1.6rem;
-  }
-
-  .benefits {
-    grid-column: 1/-1;
-    margin-bottom: 30rem;
-  }
-
-  .checkout-text {
-    margin-top: 30rem;
-  }
-
   .carousel {
-    width: 60rem;
+    width: auto;
     height: auto;
     gap: 50px;
   }
-
-  .testimonial-1 {
-    height: 20rem;
+  .modal {
+    width: 80%;
+  }
+  .modal-close-btn {
+    width: 10%;
   }
 
-  .faq-box {
-    width: 60rem;
+  /* BELOW 704PX (Smaller tablets) */
+
+  @media (max-width: 44em) {
+    html {
+      /* 8px / 16px */
+      font-size: 50%;
+    }
+
+    .hero {
+      grid-template-columns: 1fr;
+      padding: 0 8rem;
+      gap: 6.4rem;
+    }
+
+    .grid {
+      row-gap: 4.8rem;
+    }
+
+    .grid--2-cols,
+    .grid--3-cols {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    .feature-img-box:nth-child(2) {
+      grid-row: 1;
+    }
+
+    .feature-img-box:nth-child(6) {
+      grid-row: 5;
+    }
+
+    .btn,
+    .btn:link,
+    .btn:visited {
+      padding: 2.4rem 1.6rem;
+    }
+
+    .benefits {
+      grid-column: 1/-1;
+      margin-bottom: 30rem;
+    }
+
+    .checkout-text {
+      margin-top: 30rem;
+    }
+
+    .carousel {
+      width: auto;
+      height: auto;
+      gap: 50px;
+    }
+
+    .testimonial-1 {
+      height: 20rem;
+    }
+
+    .testimonial-text {
+      font-size: 15px;
+      font-weight: 200;
+    }
+
+    .faq-box {
+      width: 60rem;
+    }
+
+    .logos img {
+      height: 1.5rem;
+    }
+
+    .address-col {
+      justify-self: left;
+    }
+
+    .section-courses {
+      margin-bottom: 9.6rem;
+    }
+    .main-nav-list {
+      gap: 2rem;
+    }
+    .heading-primary {
+      width: auto;
+    }
   }
 
-  .logos img {
-    height: 1.5rem;
+  /* BELOW 544PX (Phones) */
+
+  @media (max-width: 34em) {
+    .grid {
+      row-gap: 4.8rem;
+    }
+    .btn,
+    .btn:link,
+    .btn:visited {
+      padding: 2.4rem 1.6rem;
+    }
+
+    .section-hero {
+      padding: 2.4rem 0 6.4rem 0;
+    }
+
+    .hero {
+      padding: 0 3.2rem;
+    }
+
+    .logos img {
+      height: 1.2rem;
+    }
+
+    .carousel {
+      display: block;
+      text-align: center;
+    }
+
+    .testimonial-1 {
+      margin-bottom: 1.25rem;
+    }
+
+    .faq-box {
+      width: 50rem;
+    }
+
+    .heading-secondary {
+      font-size: 2.5rem;
+    }
+    /* MOBILE NAVIGATION*/
+
+    .btn-mobile-nav {
+      display: block;
+      z-index: 1000;
+    }
+
+    .main-nav {
+      background-color: rgb(255, 255, 255, 0.9);
+      -webkit-backdrop-filter: blur(5px);
+      backdrop-filter: blur(10px);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      transform: translateX(100%);
+      /* all the way top to bottom  */
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.5s ease-in;
+      /* move fast at first slow down at the end */
+
+      /* hide navigation */
+      /* display:none -> allows no transition at all */
+
+      /* 1)hide it visually */
+      opacity: 0;
+
+      /* 2)Make it unaccessible to mouse and keyboard */
+      /* otherwise, even when it's hidden tap can go there  */
+      pointer-events: none;
+
+      /* 3)Hide it from screen readers */
+      visibility: hidden;
+      z-index: 1;
+    }
+
+    .nav-open .main-nav {
+      opacity: 1;
+      pointer-events: auto;
+      visibility: visible;
+      transform: translateX(0);
+    }
+
+    .nav-open .icon-mobile-nav[name="close-outline"] {
+      display: block;
+    }
+
+    .nav-open .icon-mobile-nav[name="menu-outline"] {
+      display: none;
+    }
+
+    .main-nav-list {
+      flex-direction: column;
+      gap: 4.8rem;
+    }
+
+    .main-nav-link:link,
+    .main-nav-link:visited {
+      font-size: 3rem;
+    }
+
+    .section-courses {
+      margin-bottom: 9.6rem;
+    }
+
+    .carousel {
+      padding-left: 30px;
+    }
   }
 
-  .address-col {
-    justify-self: left;
-  }
+  /* BELOW 447PX */
 
-  .section-courses {
-    margin-bottom: 9.6rem;
-  }
-}
+  @media (max-width: 27em) {
+    html {
+      /* 7px / 16px */
+      font-size: 43%;
+    }
 
-/* BELOW 544PX (Phones) */
+    .carousel {
+      width: 45rem;
+      height: auto;
+      gap: 30px;
+    }
 
-@media (max-width: 34em) {
-  .grid {
-    row-gap: 4.8rem;
-  }
-  .btn,
-  .btn:link,
-  .btn:visited {
-    padding: 2.4rem 1.6rem;
-  }
+    .testimonial-1 {
+      width: 15rem;
+      height: auto;
+    }
 
-  .section-hero {
-    padding: 2.4rem 0 6.4rem 0;
-  }
+    .testimonial-text {
+      font-size: 15px;
+    }
 
-  .hero {
-    padding: 0 3.2rem;
-  }
+    .faq-box {
+      width: 45rem;
+    }
 
-  .logos img {
-    height: 1.2rem;
-  }
+    .faq-box .question {
+      font-size: 20px;
+    }
 
-  .carousel {
-    width: 50rem;
-    height: auto;
-    gap: 30px;
-  }
-
-  .faq-box {
-    width: 50rem;
-  }
-
-  .heading-secondary {
-    font-size: 2.5rem;
-  }
-  /* MOBILE NAVIGATION*/
-
-  .btn-mobile-nav {
-    display: block;
-    z-index: 1000;
-  }
-
-  .main-nav {
-    background-color: rgb(255, 255, 255, 0.9);
-    -webkit-backdrop-filter: blur(5px);
-    backdrop-filter: blur(10px);
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    transform: translateX(100%);
-    /* all the way top to bottom  */
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.5s ease-in;
-    /* move fast at first slow down at the end */
-
-    /* hide navigation */
-    /* display:none -> allows no transition at all */
-
-    /* 1)hide it visually */
-    opacity: 0;
-
-    /* 2)Make it unaccessible to mouse and keyboard */
-    /* otherwise, even when it's hidden tap can go there  */
-    pointer-events: none;
-
-    /* 3)Hide it from screen readers */
-    visibility: hidden;
-    z-index: 1;
-  }
-
-  .nav-open .main-nav {
-    opacity: 1;
-    pointer-events: auto;
-    visibility: visible;
-    transform: translateX(0);
-  }
-
-  .nav-open .icon-mobile-nav[name="close-outline"] {
-    display: block;
-  }
-
-  .nav-open .icon-mobile-nav[name="menu-outline"] {
-    display: none;
-  }
-
-  .main-nav-list {
-    flex-direction: column;
-    gap: 4.8rem;
-  }
-
-  .main-nav-link:link,
-  .main-nav-link:visited {
-    font-size: 3rem;
-  }
-
-  .section-courses {
-    margin-bottom: 9.6rem;
-  }
-
-  .carousel {
-    padding-left: 30px;
-  }
-}
-
-/* BELOW 447PX */
-
-@media (max-width: 27em) {
-  html {
-    /* 7px / 16px */
-    font-size: 43%;
-  }
-
-  .carousel {
-    width: 45rem;
-    height: auto;
-    gap: 30px;
-  }
-
-  .testimonial-1 {
-    width: 15rem;
-    height: auto;
-  }
-
-  .testimonial-text {
-    font-size: 15px;
-  }
-
-  .faq-box {
-    width: 45rem;
-  }
-
-  .faq-box .question {
-    font-size: 20px;
-  }
-
-  .carousel {
-    padding-left: 30px;
+    .carousel {
+      padding-left: 30px;
+    }
   }
 }

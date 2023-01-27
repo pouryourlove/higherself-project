@@ -112,22 +112,22 @@ const interval = setInterval(() => {
 const testimonials = [
   {
     id: 1,
-    name: "Gaelle",
+    name: "Mellisa",
     img: "https://i.postimg.cc/qMyJzWmH/testimonial-2.jpg",
-    text: "hello",
+    text: "HigherSelf is great! It offers a wide variety of guided meditations that cater to different emotions and needs. The audio-guided meditations are led by professional and soothing voices. The progress tracking feature helps me stay consistent with my practice. Overall, it has been a great tool for improving my mental well-being.",
   },
 
   {
     id: 2,
     name: "David",
     img: "https://i.postimg.cc/XJjG84z5/testimonial-3.jpg",
-    text: "I like youuuuuuuuuuu",
+    text: "HigherSelf offers a wide range of guided meditations that cater to different emotions and needs. The audio-guided meditations are led by professional and soothing voices. The progress tracking feature is also great for keeping me motivated and consistent. I highly recommend this app to anyone looking to improve their mental well-being.",
   },
   {
     id: 3,
-    name: "hello",
+    name: "John",
     img: "https://i.postimg.cc/YChCt8vJ/avatar-e278114ff56fefeca5b1d16823f204f4.jpg",
-    text: "love youuu",
+    text: "I was skeptical about higherSelf but this one exceeded my expectations.I would highly recommend this app to anyone looking to integrate meditation into their daily routine.",
   },
 ];
 

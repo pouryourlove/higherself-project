@@ -106,7 +106,7 @@
 }
 
 .modal-close-btn {
-  width: 5rem !important;
+  width: 10% !important;
   border-radius: 0 !important;
   position: absolute;
   top: 0;
@@ -149,7 +149,7 @@
   line-height: 1.05;
   margin-bottom: 3.2rem;
   width: 550px;
-  height: 100px;
+  height: 100%;
   overflow: hidden;
 }
 
@@ -295,7 +295,6 @@
   content: "";
   display: block;
   border-radius: 50%;
-
   position: absolute;
 }
 
@@ -317,13 +316,12 @@
   width: 35%;
 }
 
-.course-img {
-  width: 100%;
-}
-
 /***************************/
 /* COURSES SECTIONS*/
 /***************************/
+.course-img {
+  width: 100%;
+}
 
 .section-courses {
   padding: 9.6rem 0;
@@ -611,7 +609,7 @@
 }
 
 /***************************/
-/*  EMAIL SECTIONS*/
+/*  SUBSCRIBE SECTIONS*/
 /***************************/
 
 .email-section {
@@ -620,7 +618,7 @@
 
 .email-box {
   padding: 60px 40px;
-  width: 60rem;
+  width: auto;
   text-align: center;
   box-shadow: 0 0 32px rgba(0, 0, 0, 0.1);
 }
