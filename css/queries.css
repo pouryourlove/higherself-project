@@ -56,7 +56,7 @@
   }
 }
 
-/* 944/16 below below 944px */
+/* 944/16 below 944px */
 
 @media (max-width: 59em) {
   html {
@@ -80,7 +80,7 @@
   }
 }
 
-/* BELOW 900PX (Smaller tablets) */
+/* BELOW 900PX */
 
 @media (max-width: 55em) {
   .hero {
