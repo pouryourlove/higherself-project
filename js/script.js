@@ -91,7 +91,7 @@ modal.style.transform = "translate(-50%, -50%)";
 /***************************/
 const heroTyping = "Meditate for self-discovery and potential.";
 const element = document.querySelector(".heading-primary");
-console.log(element);
+
 //The current index of the text being displayed
 let index = 0;
 const interval = setInterval(() => {
