@@ -25,6 +25,7 @@
 ## 4. 주요 기능
 
 ### 4.1. 이메일링 리스트 모달 창 구현
+<img src="https://user-images.githubusercontent.com/90593162/228273346-be1e577f-6f4b-42ba-abee-a70725377415.gif">
 
 <details>
 <summary>코드 보기</summary>
@@ -54,6 +55,44 @@
       </div>
 
       <div id="overlay" class="overlay"></div>
+
+```
+</div>
+</details>
+
+### 4.2. 반응형 디자인으로 모바일 버전 메뉴 구현
+<img src="https://user-images.githubusercontent.com/90593162/228281628-fc6c9c57-4427-4754-8708-4d84340ffdae.gif">
+<details>
+<summary>코드 보기</summary>
+<div markdown="1">
+
+``` 
+   코드넣기  
+
+```
+</div>
+</details>
+
+### 4.3. Hero 섹션에 타이핑 텍스트 애니메이션 추가
+<details>
+<summary>코드 보기</summary>
+<div markdown="1">
+
+``` 
+   const heroTyping = "Meditate for self-discovery and potential.";
+   const element = document.querySelector(".heading-primary");
+
+  //The current index of the text being displayed
+  let index = 0;
+  const interval = setInterval(() => {
+  //update the heroTyping
+  element.textContent = heroTyping.slice(0, index);
+  index++;
+  //if all the text has been displayed, clear the interval
+  if (index > heroTyping.length) {
+    clearInterval(interval);
+    }
+  }, 100);  
 
 ```
 </div>
