@@ -23,7 +23,41 @@
 </br>
 
 ## 4. 주요 기능
-  
+
+### 4.1. 이메일링 리스트 모달 창 구현
+
+<details>
+<summary>코드 보기</summary>
+<div markdown="1">
+
+``` 
+     <div id="myModal" class="modal">
+        <div class="modal-content">
+          <section class="email-section grid" id="subscribe">
+            <div class="email-box">
+              <button class="modal-close-btn" id="close">X</button>
+              <h1>Subscribe Now</h1>
+              <span>Get notified about the next update</span>
+
+              <form action="#">
+                <input type="text" name="name" placeholder="Name" />
+                <input
+                  type="email"
+                  name="email-address"
+                  placeholder="Email Address"
+                />
+                <button type="submit">Subscribe</button>
+              </form>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <div id="overlay" class="overlay"></div>
+
+```
+</div>
+</details>
 
 
 
