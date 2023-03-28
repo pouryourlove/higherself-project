@@ -74,6 +74,8 @@
 </details>
 
 ### 4.3. Hero 섹션에 타이핑 텍스트 애니메이션 추가
+<img src="https://user-images.githubusercontent.com/90593162/228287268-be919905-beb5-46f7-92e4-a57804976196.gif">
+
 <details>
 <summary>코드 보기</summary>
 <div markdown="1">
