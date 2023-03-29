@@ -278,7 +278,7 @@ questions.forEach(function (question) {
 
 ### 5. 문제 해결
 - 아래와 같이 모달창이 히어로 섹션 부분 사진 위에 나와야 하는데 아래로 나오는 에러가 발생.
-<img src="https://velog.velcdn.com/images/pouryourlove/post/ca8322f6-219f-45ea-8e7c-49672ad425ec/image.png">
+<img src="https://velog.velcdn.com/images/pouryourlove/post/ca8322f6-219f-45ea-8e7c-49672ad425ec/image.png" width="400px">
 모달창의 z-index 값을 조정해주자 에러가 해결됨
 
 
