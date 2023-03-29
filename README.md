@@ -67,7 +67,13 @@
 <div markdown="1">
 
 ``` 
-   코드넣기  
+  const btnNavEl = document.querySelector(".btn-mobile-nav");
+  const headerEl = document.querySelector(".header");
+
+  btnNavEl.addEventListener("click", function () {
+  headerEl.classList.toggle("nav-open");
+});
+  
 
 ```
 </div>
