@@ -100,7 +100,103 @@
 </div>
 </details>
 
+### 4.2. Courses 섹션에 카드 플립 기능 구현
+<img src="https://user-images.githubusercontent.com/90593162/228441762-801d7f51-566f-42f1-9a29-be7a41bf7083.gif">
 
+<details>
+<summary>코드 보기</summary>
+<div markdown="1">
+
+``` 
+  function flipFunction() {
+    let myElement = document.getElementById("theCard");
+    myElement.classList.toggle("flipper");
+  }  
+
+```
+</div>
+</details>
+
+### 4.3. Carousel 기능 구현
+<img src="https://user-images.githubusercontent.com/90593162/228446103-65e3531b-f709-4e57-bc9c-489d164b7066.gif">
+
+<details>
+<summary>코드 보기</summary>
+<div markdown="1">
+
+``` 
+const testimonials = [
+  {
+    id: 1,
+    name: "Mellisa",
+    img: "https://i.postimg.cc/qMyJzWmH/testimonial-2.jpg",
+    text: "HigherSelf is great! It offers a wide variety of guided meditations that cater to different emotions and needs. The audio-guided meditations are led by professional and soothing voices. The progress tracking feature helps me stay consistent with my practice. Overall, it has been a great tool for improving my mental well-being.",
+  },
+
+  {
+    id: 2,
+    name: "David",
+    img: "https://i.postimg.cc/XJjG84z5/testimonial-3.jpg",
+    text: "HigherSelf offers a wide range of guided meditations that cater to different emotions and needs. The audio-guided meditations are led by professional and soothing voices. The progress tracking feature is also great for keeping me motivated and consistent. I highly recommend this app to anyone looking to improve their mental well-being.",
+  },
+  {
+    id: 3,
+    name: "John",
+    img: "https://i.postimg.cc/YChCt8vJ/avatar-e278114ff56fefeca5b1d16823f204f4.jpg",
+    text: "I was skeptical about higherSelf but this one exceeded my expectations.I would highly recommend this app to anyone looking to integrate meditation into their daily routine.",
+  },
+];
+
+// select items
+const img = document.getElementById("person-img");
+console.log(img);
+const text = document.getElementById("info");
+const name = document.getElementById("author");
+
+const leftBtn = document.querySelector(".btn--left");
+const rightBtn = document.querySelector(".btn--right");
+
+//set starting item
+
+let currentItem = 0;
+
+//load initial item
+window.addEventListener("DOMContentLoaded", function () {
+  showPerson();
+});
+
+//show person based on item
+
+function showPerson() {
+  const item = testimonials[currentItem];
+  img.src = item.img;
+  author.textContent = item.name;
+  info.textContent = item.text;
+}
+
+//show next person
+
+rightBtn.addEventListener("click", function () {
+  currentItem++;
+  if (currentItem > testimonials.length - 1) {
+    currentItem = 0;
+  }
+  showPerson(currentItem);
+});
+
+//show previous person
+
+leftBtn.addEventListener("click", function () {
+  currentItem--;
+  if (currentItem < 0) {
+    currentItem = testimonials.length - 1;
+  }
+  showPerson(currentItem);
+});
+
+```
+</div>
+</details>
 
 ### 5. 문제 해결
 - 
