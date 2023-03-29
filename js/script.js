@@ -133,7 +133,6 @@ const testimonials = [
 
 // select items
 const img = document.getElementById("person-img");
-console.log(img);
 const text = document.getElementById("info");
 const name = document.getElementById("author");
 
