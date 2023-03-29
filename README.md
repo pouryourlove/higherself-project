@@ -232,6 +232,48 @@ questions.forEach(function (question) {
 ```
 </div>
 </details>  
+
+### 4.7. Smooth scrolling 기능 구현
+
+<img src="https://user-images.githubusercontent.com/90593162/228462806-0afe6a51-401b-4945-b4fe-5875a2dd1e7a.gif">
+
+<details>
+<summary>코드 보기</summary>
+<div markdown="1">
+    
+``` 
+ // 1)select all links
+
+const allLinks = document.querySelectorAll("a:link");
+
+// 2)select each link and prevent default
+  
+    allLinks.forEach(function (link) {
+    link.addEventListener("click", function (e) {
+    e.preventDefault();
+    const href = link.getAttribute("href");
+
+    // scroll back to top
+    if (href === "#")
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+
+    // Scroll to other links
+    if (href !== "#" && href.startsWith("#")) {
+      const sectionEl = document.querySelector(href);
+      sectionEl.scrollIntoView({ behavior: "smooth" });
+
+      //Close mbile navigation
+      if (link.classList.contains("main-nav-link"))
+        headerEl.classList.toggle("nav-open");
+    }
+  });
+});
+```
+</div>
+</details>  
   
 
 ### 5. 문제 해결
