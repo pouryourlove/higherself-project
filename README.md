@@ -100,7 +100,7 @@
 </div>
 </details>
 
-### 4.2. Courses 섹션에 카드 플립 기능 구현
+### 4.4. Courses 섹션에 카드 플립 기능 구현
 <img src="https://user-images.githubusercontent.com/90593162/228441762-801d7f51-566f-42f1-9a29-be7a41bf7083.gif">
 
 <details>
@@ -117,7 +117,7 @@
 </div>
 </details>
 
-### 4.3. Carousel 기능 구현
+### 4.5. Carousel 기능 구현
 <img src="https://user-images.githubusercontent.com/90593162/228446103-65e3531b-f709-4e57-bc9c-489d164b7066.gif">
 
 <details>
@@ -197,6 +197,42 @@ leftBtn.addEventListener("click", function () {
 ```
 </div>
 </details>
+  
+### 4.6. Accordion 기능 구현
+<img src="https://user-images.githubusercontent.com/90593162/228459135-8ad50166-e040-47df-a555-9e5159d9094d.gif">
+
+<details>
+<summary>코드 보기</summary>
+<div markdown="1">
+
+``` 
+const questions = document.querySelectorAll(".item");
+
+questions.forEach(function (question) {
+  const btn = question.querySelector(".open-icon");
+  const closeBtn = question.querySelector(".close-icon");
+
+  btn.addEventListener("click", function () {
+    questions.forEach(function (item) {
+      if (item !== questions) {
+        item.classList.remove("open");
+      }
+    });
+  });
+
+  btn.addEventListener("click", function () {
+    question.classList.toggle("open");
+  });
+
+  closeBtn.addEventListener("click", function () {
+    question.classList.remove("open");
+  });
+});
+
+```
+</div>
+</details>  
+  
 
 ### 5. 문제 해결
 - 
