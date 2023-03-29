@@ -244,7 +244,7 @@ questions.forEach(function (question) {
 ``` 
  // 1)select all links
 
-const allLinks = document.querySelectorAll("a:link");
+    const allLinks = document.querySelectorAll("a:link");
 
 // 2)select each link and prevent default
   
