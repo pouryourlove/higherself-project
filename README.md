@@ -296,7 +296,7 @@ questions.forEach(function (question) {
 🔍Hero 섹션에 타이핑 텍스트 애니메이션 코드 작성 시 에러 발생
 
 - 하나의 요소만 선택하는 querySelector가 아니라 getElementsByClassName을 이용해 요소 선택한 것이 이유. querySelector로 변경하여 에러 해결.
-- 관련 블로그 포스팅: https://velog.io/@pouryourlove/getElementsByClassName-querySelector
+- 관련 블로그 포스팅: <https://velog.io/@pouryourlove/getElementsByClassName-querySelector>
   
 🔍새로 만든 Git branch 내에서 수정을 하고 커밋 후 푸쉬 시도할 때 에러 발생
 
