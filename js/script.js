@@ -73,6 +73,7 @@ const subscribe = document.getElementById("subscribe");
 const closeBtn = document.getElementById("close");
 
 subscribe.addEventListener("click", function () {
+  clearErrorMessages();
   modal.style.display = "block";
   overlay.style.display = "block";
 });
@@ -82,9 +83,45 @@ closeBtn.addEventListener("click", function () {
   overlay.style.display = "none";
 });
 
+function clearErrorMessages() {
+  const errorMsg = document.getElementById("error-message");
+  errorMsg.innerHTML = "";
+}
+
 modal.style.transform = "translate(-50%, -50%)";
 
 //Show modal and overlay
+
+/***************************/
+/*SUBSCRIBE FORM VALIDATION*/
+/***************************/
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("subscribe-form");
+  const name = document.getElementById("name");
+  const email = document.getElementById("email");
+  const errorMsg = document.getElementById("error-message");
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    let valid = true;
+    errorMsg.textContent = "";
+
+    if (name.value.trim() === "") {
+      valid = false;
+      errorMsg.innerHTML += '<div class="error">Please write your name</div>';
+    }
+
+    if (!validEmail(email.value)) {
+      valid = false;
+      errorMsg.innerHTML += '<div class="error">Invalid email address</div>';
+    }
+  });
+  function validEmail(email) {
+    const regularExpression = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return regularExpression.test(String(email).toLowerCase());
+  }
+});
 
 /***************************/
 // HERO TYPING TEXT ANIMATION
@@ -103,6 +140,7 @@ const interval = setInterval(() => {
     clearInterval(interval);
   }
 }, 100);
+
 /***************************/
 /* TESTOMINAL SECTIONS*/
 /***************************/
