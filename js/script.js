@@ -71,11 +71,16 @@ const modal = document.getElementById("myModal");
 const overlay = document.getElementById("overlay");
 const subscribe = document.getElementById("subscribe");
 const closeBtn = document.getElementById("close");
+const form = document.getElementById("subscribe-form");
+const username = document.getElementById("name");
+const email = document.getElementById("email");
+const errorMsg = document.getElementById("error-message");
 
 subscribe.addEventListener("click", function () {
   clearErrorMessages();
   modal.style.display = "block";
   overlay.style.display = "block";
+  username.focus();
 });
 
 closeBtn.addEventListener("click", function () {
@@ -96,18 +101,13 @@ modal.style.transform = "translate(-50%, -50%)";
 /*SUBSCRIBE FORM VALIDATION*/
 /***************************/
 document.addEventListener("DOMContentLoaded", function () {
-  const form = document.getElementById("subscribe-form");
-  const name = document.getElementById("name");
-  const email = document.getElementById("email");
-  const errorMsg = document.getElementById("error-message");
-
   form.addEventListener("submit", (e) => {
     e.preventDefault();
 
     let valid = true;
     errorMsg.textContent = "";
 
-    if (name.value.trim() === "") {
+    if (username.value.trim() === "") {
       valid = false;
       errorMsg.innerHTML += '<div class="error">Please write your name</div>';
     }
