@@ -94,7 +94,6 @@ function clearErrorMessages() {
 }
 
 modal.style.transform = "translate(-50%, -50%)";
-
 //Show modal and overlay
 
 /***************************/
