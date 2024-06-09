@@ -391,7 +391,8 @@
 }
 
 .course-content {
-  padding: 3.2rem 2.4rem 4.8rem 2.4rem;
+  padding: 3.2rem 2.4rem 0 2.4rem;
+
 }
 
 .course-title {
@@ -462,6 +463,12 @@
   height: 3rem;
   color: #12b886;
 }
+
+
+
+
+
+
 
 /***************************/
 /* TESTIMONIAL SECTIONS*/
