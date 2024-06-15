@@ -1,34 +1,68 @@
 /***************************/
 // NAV SMOOTH SCCROLLING ANIMATION
 /***************************/
-// 1)select all links
-
 const allLinks = document.querySelectorAll("a:link");
 
-// 2)select each link and prevent default
 allLinks.forEach(function (link) {
   link.addEventListener("click", function (e) {
-    e.preventDefault();
     const href = link.getAttribute("href");
 
-    // scroll back to top
-    if (href === "#")
+    // Check if href is an internal anchor link (starts with '#')
+    if (href && href.startsWith("#")) {
+      e.preventDefault(); // Prevent default only for internal anchor links
+  
+      // Scroll to the section
+      const sectionEl = document.querySelector(href);
+      if (sectionEl) {
+        sectionEl.scrollIntoView({ behavior: "smooth" });
+      }
+  
+      // Close mobile navigation if necessary
+      if (link.classList.contains("main-nav-link")) {
+        headerEl.classList.toggle("nav-open");
+      }
+    } else if (href === "#") {
+      e.preventDefault(); // Prevent default for href="#"
+
+      // Scroll back to top
       window.scrollTo({
         top: 0,
         behavior: "smooth",
       });
-
-    // Scroll to other links
-    if (href !== "#" && href.startsWith("#")) {
-      const sectionEl = document.querySelector(href);
-      sectionEl.scrollIntoView({ behavior: "smooth" });
-
-      //Close mbile navigation
-      if (link.classList.contains("main-nav-link"))
-        headerEl.classList.toggle("nav-open");
     }
+    // No preventDefault() for links to cart.html
   });
 });
+
+
+// 1)select all links
+
+// const allLinks = document.querySelectorAll("a:link");
+
+// // 2)select each link and prevent default
+// allLinks.forEach(function (link) {
+//   link.addEventListener("click", function (e) {
+//     e.preventDefault();
+//     const href = link.getAttribute("href");
+
+//     // scroll back to top
+//     if (href === "#")
+//       window.scrollTo({
+//         top: 0,
+//         behavior: "smooth",
+//       });
+
+//     // Scroll to other links
+//     if (href !== "#" && href.startsWith("#")) {
+//       const sectionEl = document.querySelector(href);
+//       sectionEl.scrollIntoView({ behavior: "smooth" });
+
+//       //Close mbile navigation
+//       if (link.classList.contains("main-nav-link"))
+//         headerEl.classList.toggle("nav-open");
+//     }
+//   });
+// });
 
 /***************************/
 // STICKY NAVIGATION
@@ -238,7 +272,7 @@ let products = [
   {
     name: "meditation with zzong",
     tag: "meditationzzong",
-    price: 20,
+    price: 15,
     inCart: 0,
   },
 ];
@@ -246,6 +280,7 @@ let products = [
 for (let i = 0; i < carts.length; i++) {
   carts[i].addEventListener("click", () => {
     cartNumbers(products[i]); //specific the clicked item
+    totalCost(products[i])
   });
 }
 
@@ -278,7 +313,6 @@ function cartNumbers(product) {
 function setItems(product) {
   let cartItems = localStorage.getItem("productsInCart");
   cartItems = JSON.parse(cartItems);
-  console.log("my cartitems are", cartItems);
 
   //to check if it's already in localstorage or not
   if (cartItems != null) {
@@ -297,6 +331,18 @@ function setItems(product) {
   }
 
   localStorage.setItem("productsInCart", JSON.stringify(cartItems));
+}
+
+function totalCost(product){
+  let cartCost = localStorage.getItem('totalCost');
+  
+
+  if(cartCost != null){
+    cartCost = parseInt(cartCost)// string to number
+    localStorage.setItem("totalCost",cartCost + product.price)
+  }else{
+    localStorage.setItem("totalCost",product.price);
+  }
 }
 
 onLoadCartNumbers();
