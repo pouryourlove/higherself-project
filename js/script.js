@@ -10,13 +10,13 @@ allLinks.forEach(function (link) {
     // Check if href is an internal anchor link (starts with '#')
     if (href && href.startsWith("#")) {
       e.preventDefault(); // Prevent default only for internal anchor links
-  
+
       // Scroll to the section
       const sectionEl = document.querySelector(href);
       if (sectionEl) {
         sectionEl.scrollIntoView({ behavior: "smooth" });
       }
-  
+
       // Close mobile navigation if necessary
       if (link.classList.contains("main-nav-link")) {
         headerEl.classList.toggle("nav-open");
@@ -33,7 +33,6 @@ allLinks.forEach(function (link) {
     // No preventDefault() for links to cart.html
   });
 });
-
 
 // 1)select all links
 
@@ -73,6 +72,14 @@ allLinks.forEach(function (link) {
 // 1)make a variable for section hero
 
 const sectionHeroEl = document.querySelector(".section-hero");
+const sectionCartEl = document.querySelector(".cart-section");
+
+let sectionEl;
+if (document.title === "HigherSelf") {
+  sectionEl = sectionHeroEl;
+} else if (document.title === "Cart") {
+  sectionEl = sectionCartEl;
+}
 
 const observer = new IntersectionObserver(
   function (entries) {
@@ -95,7 +102,7 @@ const observer = new IntersectionObserver(
     //because the height of the nav is 8rem... and it blocks the next section so we put -80px so the sticky bar can appear before the next section.
   }
 );
-observer.observe(sectionHeroEl);
+observer.observe(sectionEl);
 
 /***************************/
 // MODAL
@@ -163,16 +170,19 @@ const heroTyping = "Meditate for self-discovery and potential.";
 const element = document.querySelector(".heading-primary");
 
 //The current index of the text being displayed
-let index = 0;
-const interval = setInterval(() => {
-  //update the heroTyping
-  element.textContent = heroTyping.slice(0, index);
-  index++;
-  //if all the text has been displayed, clear the interval
-  if (index > heroTyping.length) {
-    clearInterval(interval);
-  }
-}, 100);
+if(document.title === "HigherSelf"){
+  let index = 0;
+  const interval = setInterval(() => {
+    //update the heroTyping
+    element.textContent = heroTyping.slice(0, index);
+    index++;
+    //if all the text has been displayed, clear the interval
+    if (index > heroTyping.length) {
+      clearInterval(interval);
+    }
+  }, 100);
+  
+}
 
 /***************************/
 /* TESTOMINAL SECTIONS*/
@@ -211,7 +221,7 @@ const leftBtn = document.querySelector(".btn--left");
 const rightBtn = document.querySelector(".btn--right");
 
 //set starting item
-
+if(document.title === "HigherSelf"){
 let currentItem = 0;
 
 //load initial item
@@ -230,23 +240,26 @@ function showPerson() {
 
 //show next person
 
-rightBtn.addEventListener("click", function () {
-  currentItem++;
-  if (currentItem > testimonials.length - 1) {
-    currentItem = 0;
-  }
-  showPerson(currentItem);
-});
+  rightBtn.addEventListener("click", function () {
+    currentItem++;
+    if (currentItem > testimonials.length - 1) {
+      currentItem = 0;
+    }
+    showPerson(currentItem);
+  });
+  
+  //show previous person
+  
+  leftBtn.addEventListener("click", function () {
+    currentItem--;
+    if (currentItem < 0) {
+      currentItem = testimonials.length - 1;
+    }
+    showPerson(currentItem);
+  });
+  
+}
 
-//show previous person
-
-leftBtn.addEventListener("click", function () {
-  currentItem--;
-  if (currentItem < 0) {
-    currentItem = testimonials.length - 1;
-  }
-  showPerson(currentItem);
-});
 
 /***************************/
 /* COURSES SECTIONS*/
@@ -265,13 +278,13 @@ let carts = document.querySelectorAll(".buy");
 let products = [
   {
     name: "mediation with juyeon",
-    tag: "meditationju",
+    tag: "meditation-ju",
     price: 20,
     inCart: 0,
   },
   {
     name: "meditation with zzong",
-    tag: "meditationzzong",
+    tag: "meditation-zzong",
     price: 15,
     inCart: 0,
   },
@@ -280,7 +293,7 @@ let products = [
 for (let i = 0; i < carts.length; i++) {
   carts[i].addEventListener("click", () => {
     cartNumbers(products[i]); //specific the clicked item
-    totalCost(products[i])
+    totalCost(products[i]);
   });
 }
 
@@ -333,19 +346,44 @@ function setItems(product) {
   localStorage.setItem("productsInCart", JSON.stringify(cartItems));
 }
 
-function totalCost(product){
-  let cartCost = localStorage.getItem('totalCost');
-  
+function totalCost(product) {
+  let cartCost = localStorage.getItem("totalCost");
 
-  if(cartCost != null){
-    cartCost = parseInt(cartCost)// string to number
-    localStorage.setItem("totalCost",cartCost + product.price)
-  }else{
-    localStorage.setItem("totalCost",product.price);
+  if (cartCost != null) {
+    cartCost = parseInt(cartCost); // string to number
+    localStorage.setItem("totalCost", cartCost + product.price);
+  } else {
+    localStorage.setItem("totalCost", product.price);
+  }
+}
+
+function displayCart() {
+  let cartItems = localStorage.getItem("productsInCart");
+  cartItems = JSON.parse(cartItems);
+  let cartContainer = document.querySelector(".products");
+
+  if (cartItems && cartContainer) {
+    cartContainer.innerHTML = '';
+
+    Object.values(cartItems).forEach(item => {
+      // Calculate total price
+      const totalPrice = item.price * item.inCart;
+      
+      cartContainer.innerHTML += `
+        <div class="product">
+          <img src="../img/courses/${item.tag}.jpg" alt="${item.name}">
+          <span>${item.name}</span>
+          <div class="price">$${item.price}</div>
+          <div class="quantity">${item.inCart}</div>
+          <div class="total">$${totalPrice}</div>
+        </div>
+      `;
+    });
   }
 }
 
 onLoadCartNumbers();
+displayCart();
 
 /***************************/
 /* FAQ SECTIONS*/
